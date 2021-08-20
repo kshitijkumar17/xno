@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_page"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/raleway_extrabold"
+            android:text="XnO"
+            android:textColor="#323232"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <com.polyak.iconswitch.IconSwitch
+            app:isw_icon_left = "@drawable/light_mode"
+            app:isw_icon_right = "@drawable/dark_mode"
+            app:isw_background_color = "#525555"
+            app:isw_thumb_color_left = "#8186AF"
+            app:isw_thumb_color_right = "#8186AF"
+            app:isw_inactive_tint_icon_left = "#FFFFFF"
+            app:isw_inactive_tint_icon_right = "#FFFFFF"
+            app:isw_active_tint_icon_left = "#FFFFFF"
+            app:isw_active_tint_icon_right = "#FFFFFF"
+            android:id = "@+id/iconSwitch"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            app:isw_default_selection = "left"
+            app:isw_icon_size = "14dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/turn_teller_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="X's turn"
+        android:textColor="#323232"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/game_layout"
+        android:layout_below="@id/turn_teller_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <Button
+            android:id="@+id/button1"
+            android:layout_margin="4dp"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_topleft_light"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_margin="4dp"
+            android:layout_toEndOf="@id/button1"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_light"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_margin="4dp"
+            android:layout_toEndOf="@id/button2"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_topright_light"/>
+        <Button
+            android:id="@+id/button4"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button1"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_light"/>
+        <Button
+            android:id="@+id/button5"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button2"
+            android:layout_toEndOf="@id/button4"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_light"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button3"
+            android:layout_toEndOf="@id/button5"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_light"/>
+        <Button
+            android:id="@+id/button7"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button4"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_bottomleft_light"/>
+        <Button
+            android:id="@+id/button8"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button5"
+            android:layout_toEndOf="@id/button7"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_light"/>
+        <Button
+            android:id="@+id/button9"
+            android:layout_margin="4dp"
+            android:layout_below="@id/button6"
+            android:layout_toEndOf="@id/button8"
+            android:layout_width="50pt"
+            android:layout_height="50pt"
+            android:textColor="#323232"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_extrabold"
+            style="?android:attr/borderlessButtonStyle"
+            app:backgroundTint="@null"
+            android:background="@drawable/grid_bottomright_light"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_restart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_bg"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/raleway_medium"
+            android:padding="20dp"
+            android:text="Restart Game"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"/>
+
+    </RelativeLayout>
+
+    <com.mopub.mobileads.MoPubView
+        android:visibility="gone"
+        android:id="@+id/adview"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:moPubAdSize="match_view"/>
+
+</RelativeLayout>
